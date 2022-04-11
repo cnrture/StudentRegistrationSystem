@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/et_faculty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blumine"
+        android:ems="10"
+        android:hint="@string/faculty"
+        android:inputType="textPersonName"
+        android:minHeight="@dimen/et_min_height"
+        android:textAlignment="center"
+        android:textColor="@color/blumine"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add_faculty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/et_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_big"
+        android:backgroundTint="@color/blumine"
+        android:ems="10"
+        android:hint="@string/department"
+        android:inputType="textPersonName"
+        android:minHeight="@dimen/et_min_height"
+        android:textAlignment="center"
+        android:textColor="@color/blumine"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add_department"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_faculty" />
+
+    <EditText
+        android:id="@+id/et_lecturer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_big"
+        android:backgroundTint="@color/blumine"
+        android:ems="10"
+        android:hint="@string/lecturer"
+        android:inputType="textPersonName"
+        android:minHeight="@dimen/et_min_height"
+        android:textAlignment="center"
+        android:textColor="@color/blumine"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add_lecturer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_department" />
+
+    <Button
+        android:id="@+id/btn_add_faculty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/add_faculty"
+        app:layout_constraintBottom_toTopOf="@+id/et_department"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_faculty" />
+
+    <Button
+        android:id="@+id/btn_add_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/add_department"
+        app:layout_constraintBottom_toTopOf="@+id/et_lecturer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_department" />
+
+    <Button
+        android:id="@+id/btn_add_lecturer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/add_lecturer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_lecturer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Student Registration System</string>
+    <string name="faculty">Faculty</string>
+    <string name="department">Department</string>
+    <string name="lecturer">Lecturer</string>
+    <string name="add">Add</string>
+    <string name="delete">delete</string>
+    <string name="update">Update</string>
+    <string name="search">Search</string>
+    <string name="display">Display</string>
+    <string name="surname">Surname</string>
+    <string name="name">Name</string>
+    <string name="student_id">Student ID</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="register">Register</string>
+    <string name="cancel">Cancel</string>
+    <string name="select_faculty">Select\nFaculty</string>
+    <string name="select_department">Select\nDepartment</string>
+    <string name="select_lecturer">Select\nLecturer</string>
+    <string name="gender">Gender</string>
+    <string name="add_faculty">Add Faculty</string>
+    <string name="add_department">Add Department</string>
+    <string name="add_lecturer">Add Lecturer</string>
+</resources>

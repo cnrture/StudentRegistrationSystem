@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/administratorFragment">
+
+    <fragment
+        android:id="@+id/administratorFragment"
+        android:name="com.canerture.studentregistrationsystem.AdministrationFragment"
+        android:label="AdministratorFragment"
+        tools:layout="@layout/fragment_administration" />
+    <fragment
+        android:id="@+id/registeredStudentsFragment"
+        android:name="com.canerture.studentregistrationsystem.RegisteredStudentsFragment"
+        android:label="RegisteredStudentsFragment"
+        tools:layout="@layout/fragment_registered_students" >
+        <action
+            android:id="@+id/action_registeredStudentsFragment_to_studentDetailFragment"
+            app:destination="@id/studentDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.canerture.studentregistrationsystem.RegistrationFragment"
+        android:label="RegistrationFragment"
+        tools:layout="@layout/fragment_registration" />
+    <fragment
+        android:id="@+id/studentDetailFragment"
+        android:name="com.canerture.studentregistrationsystem.StudentDetailFragment"
+        android:label="StudentDetailFragment"
+        tools:layout="@layout/fragment_student_detail" >
+        <argument
+            android:name="selectedStudent"
+            app:argType="com.canerture.studentregistrationsystem.StudentModel" />
+    </fragment>
+</navigation>

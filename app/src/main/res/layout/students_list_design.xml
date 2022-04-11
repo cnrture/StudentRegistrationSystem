@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_student"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_very_small"
+    android:layout_marginVertical="@dimen/margin_very_small"
+    app:cardCornerRadius="@dimen/radius"
+    app:cardElevation="@dimen/elevation">
+
+    <TextView
+        android:id="@+id/tv_name_surname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="@dimen/padding_medium"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        android:textColor="@color/blumine"
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="bold" />
+
+</androidx.cardview.widget.CardView>

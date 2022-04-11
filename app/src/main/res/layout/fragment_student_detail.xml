@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_faculty"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/til_department"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/rb_female">
+
+        <AutoCompleteTextView
+            android:id="@+id/txt_faculty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dropDownHeight="wrap_content"
+            android:hint="@string/faculty"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_department"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/til_lecturer"
+        app:layout_constraintEnd_toEndOf="@+id/til_faculty"
+        app:layout_constraintStart_toStartOf="@+id/til_faculty"
+        app:layout_constraintTop_toBottomOf="@+id/til_faculty">
+
+        <AutoCompleteTextView
+            android:id="@+id/txt_department"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dropDownHeight="wrap_content"
+            android:hint="@string/department"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_lecturer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn_update"
+        app:layout_constraintEnd_toEndOf="@+id/til_department"
+        app:layout_constraintStart_toStartOf="@+id/til_department"
+        app:layout_constraintTop_toBottomOf="@+id/til_department">
+
+        <AutoCompleteTextView
+            android:id="@+id/txt_lecturer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dropDownHeight="wrap_content"
+            android:hint="@string/lecturer"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioButton
+        android:id="@+id/rb_female"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/blumine"
+        android:text="@string/female"
+        android:textColor="@color/blumine"
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/til_faculty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rb_male"
+        app:layout_constraintTop_toBottomOf="@+id/et_student_surname" />
+
+    <RadioButton
+        android:id="@+id/rb_male"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/blumine"
+        android:text="@string/male"
+        android:textColor="@color/blumine"
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/rb_female"
+        app:layout_constraintEnd_toStartOf="@+id/rb_female"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toTopOf="@+id/rb_female" />
+
+    <EditText
+        android:id="@+id/et_student_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="6"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/et_student_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1234567890" />
+
+    <EditText
+        android:id="@+id/et_student_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/et_student_surname"
+        app:layout_constraintEnd_toEndOf="@+id/et_student_id"
+        app:layout_constraintStart_toStartOf="@+id/et_student_id"
+        app:layout_constraintTop_toBottomOf="@+id/et_student_id"
+        tools:text="Caner" />
+
+    <EditText
+        android:id="@+id/et_student_surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rb_female"
+        app:layout_constraintEnd_toEndOf="@+id/et_student_id"
+        app:layout_constraintStart_toStartOf="@+id/et_student_id"
+        app:layout_constraintTop_toBottomOf="@+id/et_student_name"
+        tools:text="Türe" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/student_id"
+        android:textColor="@color/blumine"
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/et_student_id"
+        app:layout_constraintEnd_toStartOf="@+id/et_student_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_student_id" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/department"
+        android:textColor="@color/blumine"
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/til_department"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/til_department" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textColor="@color/blumine"
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/et_student_name"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/et_student_name" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/surname"
+        android:textColor="@color/blumine"
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/et_student_surname"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/et_student_surname" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gender"
+        android:textColor="@color/blumine"
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/rb_female"
+        app:layout_constraintEnd_toStartOf="@+id/rb_male"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rb_female" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:text="@string/faculty"
+        android:textColor="@color/blumine"
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/til_faculty"
+        app:layout_constraintEnd_toStartOf="@+id/til_faculty"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/til_faculty" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lecturer"
+        android:textColor="@color/blumine"
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/til_lecturer"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/til_lecturer" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_lecturer" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_update"
+        app:layout_constraintTop_toTopOf="@+id/btn_update" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

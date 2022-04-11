@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="elevation">10dp</dimen>
+    <dimen name="radius">10dp</dimen>
+
+    <dimen name="et_min_height">48dp</dimen>
+
+    <dimen name="margin_very_small">8dp</dimen>
+    <dimen name="margin_small">16dp</dimen>
+    <dimen name="margin_medium">48dp</dimen>
+    <dimen name="margin_big">80dp</dimen>
+    <dimen name="margin_very_big">108dp</dimen>
+
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+
+    <dimen name="text_size_small">16sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_big">20sp</dimen>
+
+    <dimen name="image_width">28dp</dimen>
+
+</resources>
